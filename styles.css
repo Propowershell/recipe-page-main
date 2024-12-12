@@ -32,16 +32,22 @@ body {
     font-size: 16px;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-}
+.image {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 40vh;
+    background: url('./assets/images/image-omelette.jpeg') no-repeat center center/cover;
+    position: relative;
+    z-index: 1; /* Stack order below the nav */
+    border-radius: 10px;
+  }
 
 .recipe {
     font-family: "YoungSerif", serif;
     color: var(--stone-900);
-    line-height: 1em;
+    line-height: 1.2em;
+    margin-top: 2rem;
 }
 
 h2 {
@@ -54,12 +60,14 @@ h2 {
 .preparation {
     background-color: var(--stone-150);
     padding: 0.2em 1.2em;
+    margin-top: 2.5em;
     border-radius: 0.5rem;
-    line-height: 2em
+    line-height: 2em;
 }
 
 .prep-heading {
     font-weight: 800;
+    color: var(--stone-100);
 }
 
 .prior {
@@ -101,8 +109,27 @@ ol li::marker {
     background-color: lightgrey;
 }
 
+    .attribution { 
+        font-size: 11px; text-align: center; 
+    }
+    
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
 
 @media (max-width: 500px) {
 
- 
+body {
+    height: 30vh;
+    background: url('./assets/images/image-omelette.jpeg') no-repeat center center/cover;
+}
+
+    .image {
+        display: none;
+    }
+
+    .recipe {
+        margin-top: 13rem;
+    }
 }
