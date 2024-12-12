@@ -1,5 +1,5 @@
 :root {
---white: hsl(0, 0%, 100%)
+--white: hsl(0, 0%, 100%);
 --stone-100: hsl(30, 54%, 90%);
 --stone-150: hsl(30, 18%, 97%);
 --stone-600: hsl(30, 10%, 34%);
@@ -30,18 +30,22 @@ body {
     padding: 1em;
     line-height: 1.5em;
     font-size: 16px;
+    background-color: var(--stone-100);
+    color: var(--stone-900);
 }
 
-.image {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    height: 40vh;
-    background: url('./assets/images/image-omelette.jpeg') no-repeat center center/cover;
-    position: relative;
-    z-index: 1; /* Stack order below the nav */
-    border-radius: 10px;
-  }
+main {
+     max-width: 40rem;
+     margin: 0 auto;
+     background-color: var(--white);
+     padding:2.5em;
+     border-radius: 1em;
+}
+
+img {
+    width: 100%;
+    border-radius: 1em;
+}
 
 .recipe {
     font-family: "YoungSerif", serif;
@@ -66,8 +70,9 @@ h2 {
 }
 
 .prep-heading {
-    font-weight: 800;
-    color: var(--stone-100);
+    font-size: 1.2em;
+    color: var(--stone-600);
+    font-variation-settings: "wght" 600;
 }
 
 .prior {
@@ -110,9 +115,10 @@ ol li::marker {
 }
 
     .attribution { 
-        font-size: 11px; text-align: center; 
+        font-size: 11px; 
+        text-align: center; 
     }
-    
+
     .attribution a { 
         color: hsl(228, 45%, 44%); 
     }
@@ -120,16 +126,26 @@ ol li::marker {
 
 @media (max-width: 500px) {
 
+
 body {
-    height: 30vh;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    height: 0vh;
     background: url('./assets/images/image-omelette.jpeg') no-repeat center center/cover;
+    position: relative;
+    z-index: 1; /* Stack order below the nav */
 }
 
-    .image {
+    img {
+        margin: 0;
         display: none;
     }
 
-    .recipe {
-        margin-top: 13rem;
+    main {
+       margin: 0;
+       border-radius: 0;
+       margin-top: 15rem;
     }
+   
 }
