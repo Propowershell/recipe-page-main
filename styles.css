@@ -29,7 +29,7 @@ body {
     font-family: "Outfit", sans-serif;
     padding: 1em;
     line-height: 1.5em;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: var(--stone-100);
     color: var(--stone-900);
 }
